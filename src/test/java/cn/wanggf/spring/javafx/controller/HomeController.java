@@ -7,5 +7,5 @@ import org.springframework.stereotype.Controller;
  * @author wanggf
  */
 @Controller
-public class HomeController extends FxController {
+public class HomeController implements FxController {
 }

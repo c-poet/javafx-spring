@@ -1,11 +1,21 @@
 package cn.wanggf.spring.javafx.core;
 
-import javafx.scene.layout.Region;
+import cn.wanggf.spring.javafx.exception.NotFoundViewException;
+import javafx.scene.Parent;
 
 /**
- * 视图基类
+ * 视图接口
  *
  * @author wanggf
  */
-public abstract class FxView extends Region {
+public interface FxView {
+    /**
+     * 获取视图
+     *
+     * @return 视图
+     * @throws NotFoundViewException 视图获取异常
+     */
+    default Parent view() throws NotFoundViewException {
+        throw new NotFoundViewException("get view failed.");
+    }
 }

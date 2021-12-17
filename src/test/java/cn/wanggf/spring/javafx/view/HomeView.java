@@ -7,5 +7,5 @@ import cn.wanggf.spring.javafx.core.FxView;
  * @author wanggf
  */
 @View
-public class HomeView extends FxView {
+public class HomeView implements FxView {
 }

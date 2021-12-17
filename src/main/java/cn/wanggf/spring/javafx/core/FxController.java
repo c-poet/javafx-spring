@@ -1,9 +1,9 @@
 package cn.wanggf.spring.javafx.core;
 
 /**
- * 控制器基类
+ * 控制器接口
  *
  * @author wanggf
  */
-public abstract class FxController {
+public interface FxController {
 }
