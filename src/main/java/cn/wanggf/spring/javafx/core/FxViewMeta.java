@@ -17,7 +17,7 @@ public class FxViewMeta {
     private String path;
 
     /**
-     * 内联FxView
+     * 内联{@link FxView}
      */
     private FxView fxView;
 
