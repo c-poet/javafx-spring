@@ -17,9 +17,9 @@ public class FxViewMeta {
     private String path;
 
     /**
-     * 内联{@link FxView}
+     * 原生视图对象
      */
-    private FxView fxView;
+    private Object originView;
 
     FxViewMeta() {
     }
@@ -40,11 +40,11 @@ public class FxViewMeta {
         return path;
     }
 
-    void setFxView(FxView fxView) {
-        this.fxView = fxView;
+    public Object getOriginView() {
+        return originView;
     }
 
-    public FxView getFxView() {
-        return fxView;
+    void setOriginView(Object originView) {
+        this.originView = originView;
     }
 }

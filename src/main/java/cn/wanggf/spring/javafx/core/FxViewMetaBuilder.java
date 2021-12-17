@@ -5,7 +5,7 @@ package cn.wanggf.spring.javafx.core;
  *
  * @author wanggf
  */
-public class FxViewMetaBuilder {
+public final class FxViewMetaBuilder {
     private final FxViewMeta fxViewMeta;
 
     private FxViewMetaBuilder(FxViewMeta fxViewMeta) {
@@ -22,9 +22,13 @@ public class FxViewMetaBuilder {
         return this;
     }
 
-    public FxViewMetaBuilder withFxView(FxView fxView) {
-        fxViewMeta.setFxView(fxView);
+    public FxViewMetaBuilder withOriginView(Object originView) {
+        fxViewMeta.setOriginView(originView);
         return this;
+    }
+
+    public FxViewMeta build() {
+        return fxViewMeta;
     }
 
     public static FxViewMetaBuilder builder() {
@@ -36,6 +40,6 @@ public class FxViewMetaBuilder {
         return builder
             .withName(fxViewMeta.getName())
             .withPath(fxViewMeta.getPath())
-            .withFxView(fxViewMeta.getFxView());
+            .withOriginView(fxViewMeta.getOriginView());
     }
 }

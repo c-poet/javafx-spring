@@ -16,9 +16,9 @@ import java.lang.annotation.*;
 @Component
 public @interface View {
     /**
-     * bean名称
+     * 视图名称
      *
-     * @return bean名称
+     * @return 视图名称
      * @see Component#value()
      */
     @AliasFor(value = "value", annotation = Component.class)
