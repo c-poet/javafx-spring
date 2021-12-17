@@ -2,7 +2,6 @@ package cn.wanggf.spring.javafx;
 
 import cn.wanggf.spring.javafx.annotation.View;
 import cn.wanggf.spring.javafx.core.FxView;
-import cn.wanggf.spring.javafx.support.CustomFxmlLoader;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.GenericApplicationContext;
