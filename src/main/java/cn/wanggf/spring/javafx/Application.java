@@ -1,11 +1,10 @@
 package cn.wanggf.spring.javafx;
 
-import cn.wanggf.spring.javafx.support.FxBeanPostProcessor;
-import cn.wanggf.spring.javafx.support.FxViewHandler;
-import org.springframework.context.ApplicationContext;
+import cn.wanggf.spring.javafx.support.*;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigRegistry;
 import org.springframework.context.support.GenericApplicationContext;
+import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
 
 /**
@@ -14,33 +13,41 @@ import org.springframework.util.ClassUtils;
  * @author wanggf
  */
 public abstract class Application extends javafx.application.Application {
-    private FxViewHandler fxViewHandler;
-
-    protected final GenericApplicationContext applicationContext;
+    protected GenericApplicationContext applicationContext;
+    protected FxConfiguration fxConfiguration;
 
     public Application() {
-        this(new AnnotationConfigApplicationContext());
+        initializeContext();
     }
 
-    public Application(GenericApplicationContext applicationContext) {
+    public void initializeContext() {
+        FxConfiguration fxConfiguration = FxConfigurationBuilder
+            .builder()
+            .addBasePackages(getPackageName())
+            .build();
+        initializeContext(fxConfiguration);
+    }
+
+    public void initializeContext(FxConfiguration fxConfiguration) {
+        initializeContext(new AnnotationConfigApplicationContext(), fxConfiguration);
+    }
+
+    public void initializeContext(GenericApplicationContext applicationContext, FxConfiguration fxConfiguration) {
+        Assert.notNull(applicationContext, "application context cannot be null.");
+        Assert.notNull(fxConfiguration, "need to pass in javafx configuration.");
         this.applicationContext = applicationContext;
-        loadContext();
-    }
-
-    public ApplicationContext getApplicationContext() {
-        return applicationContext;
-    }
-
-    /**
-     * 初始化上下文
-     */
-    protected void loadContext() {
-        applicationContext.registerBean(FxBeanPostProcessor.class);
-        if (applicationContext instanceof AnnotationConfigRegistry) {
-            ((AnnotationConfigRegistry) applicationContext)
-                .scan(getPackageName());
+        this.fxConfiguration = fxConfiguration;
+        if (fxConfiguration.isInitialScanPackage()) {
+            // 视图处理器
+            FxViewHandler fxViewHandler = new DefaultFxViewHandler(fxConfiguration, applicationContext);
+            // 注册bean处理器
+            applicationContext.registerBean(FxViewBeanPostProcessor.class, fxViewHandler);
+            String[] basePackages = fxConfiguration.getBasePackages();
+            if (basePackages != null && basePackages.length > 0 && applicationContext instanceof AnnotationConfigRegistry) {
+                ((AnnotationConfigRegistry) applicationContext).scan(basePackages);
+            }
+            applicationContext.refresh();
         }
-        applicationContext.refresh();
     }
 
     /**

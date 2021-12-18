@@ -36,7 +36,7 @@ public class DefaultFxViewHandler implements FxViewHandler {
         Enhancer enhancer = new Enhancer();
         enhancer.setInterfaces(new Class[]{FxView.class});
         enhancer.setSuperclass(clazz);
-        enhancer.setCallback(new FxViewImpl(fxViewMeta, applicationContext, new ControllerCallback<>(applicationContext)));
+        enhancer.setCallback(new FxViewImpl(fxViewMeta, applicationContext, applicationContext::getBean));
         return enhancer.create();
     }
 
