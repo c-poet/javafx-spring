@@ -1,7 +1,7 @@
-package cn.wanggf.spring.javafx;
+package cn.wanggf.javafx.spring;
 
 
-import cn.wanggf.spring.javafx.view.HomeView;
+import cn.wanggf.javafx.spring.view.HomeView;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 

@@ -1,6 +1,6 @@
-package cn.wanggf.spring.javafx.core;
+package cn.wanggf.javafx.spring.core;
 
-import cn.wanggf.spring.javafx.exception.NotFoundViewException;
+import cn.wanggf.javafx.spring.exception.NotFoundViewException;
 import javafx.scene.Parent;
 
 import java.net.URL;

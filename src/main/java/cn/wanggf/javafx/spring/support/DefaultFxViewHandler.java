@@ -1,10 +1,10 @@
-package cn.wanggf.spring.javafx.support;
+package cn.wanggf.javafx.spring.support;
 
-import cn.wanggf.spring.javafx.annotation.View;
-import cn.wanggf.spring.javafx.core.FxView;
-import cn.wanggf.spring.javafx.core.FxViewImpl;
-import cn.wanggf.spring.javafx.core.FxViewMeta;
-import cn.wanggf.spring.javafx.core.FxViewMetaBuilder;
+import cn.wanggf.javafx.spring.annotation.View;
+import cn.wanggf.javafx.spring.core.FxView;
+import cn.wanggf.javafx.spring.core.FxViewImpl;
+import cn.wanggf.javafx.spring.core.FxViewMeta;
+import cn.wanggf.javafx.spring.core.FxViewMetaBuilder;
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.util.StringUtils;

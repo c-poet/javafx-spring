@@ -1,5 +1,6 @@
-package cn.wanggf.spring.javafx;
+package cn.wanggf.javafx.spring;
 
+import cn.wanggf.javafx.spring.support.*;
 import cn.wanggf.spring.javafx.support.*;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigRegistry;

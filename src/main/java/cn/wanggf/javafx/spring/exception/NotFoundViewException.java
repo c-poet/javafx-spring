@@ -1,4 +1,4 @@
-package cn.wanggf.spring.javafx.exception;
+package cn.wanggf.javafx.spring.exception;
 
 /**
  * 视图查找异常

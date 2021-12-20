@@ -1,4 +1,4 @@
-package cn.wanggf.spring.javafx.support;
+package cn.wanggf.javafx.spring.support;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

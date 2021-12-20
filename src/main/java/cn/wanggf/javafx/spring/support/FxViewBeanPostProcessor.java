@@ -1,6 +1,6 @@
-package cn.wanggf.spring.javafx.support;
+package cn.wanggf.javafx.spring.support;
 
-import cn.wanggf.spring.javafx.annotation.View;
+import cn.wanggf.javafx.spring.annotation.View;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.core.annotation.AnnotationUtils;

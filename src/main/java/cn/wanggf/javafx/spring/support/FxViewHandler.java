@@ -1,6 +1,6 @@
-package cn.wanggf.spring.javafx.support;
+package cn.wanggf.javafx.spring.support;
 
-import cn.wanggf.spring.javafx.annotation.View;
+import cn.wanggf.javafx.spring.annotation.View;
 
 /**
  * 视图处理器

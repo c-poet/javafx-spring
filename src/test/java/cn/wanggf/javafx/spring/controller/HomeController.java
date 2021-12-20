@@ -1,6 +1,6 @@
-package cn.wanggf.spring.javafx.controller;
+package cn.wanggf.javafx.spring.controller;
 
-import cn.wanggf.spring.javafx.core.FxController;
+import cn.wanggf.javafx.spring.core.FxController;
 import org.springframework.stereotype.Controller;
 
 /**

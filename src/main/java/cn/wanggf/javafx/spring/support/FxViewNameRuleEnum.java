@@ -1,4 +1,4 @@
-package cn.wanggf.spring.javafx.support;
+package cn.wanggf.javafx.spring.support;
 
 /**
  * 视图命名规则

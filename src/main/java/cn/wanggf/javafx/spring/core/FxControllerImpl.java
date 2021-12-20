@@ -1,4 +1,4 @@
-package cn.wanggf.spring.javafx.core;
+package cn.wanggf.javafx.spring.core;
 
 /**
  * {@link FxController}实现

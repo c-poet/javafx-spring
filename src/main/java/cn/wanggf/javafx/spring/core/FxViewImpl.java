@@ -1,8 +1,8 @@
-package cn.wanggf.spring.javafx.core;
+package cn.wanggf.javafx.spring.core;
 
-import cn.wanggf.spring.javafx.exception.NotFoundViewException;
-import cn.wanggf.spring.javafx.support.ControllerCallback;
-import cn.wanggf.spring.javafx.support.CustomFxmlLoader;
+import cn.wanggf.javafx.spring.exception.NotFoundViewException;
+import cn.wanggf.javafx.spring.support.ControllerCallback;
+import cn.wanggf.javafx.spring.support.CustomFxmlLoader;
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
 import org.springframework.core.io.ResourceLoader;

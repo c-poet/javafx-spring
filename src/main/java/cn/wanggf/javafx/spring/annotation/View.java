@@ -1,4 +1,4 @@
-package cn.wanggf.spring.javafx.annotation;
+package cn.wanggf.javafx.spring.annotation;
 
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.stereotype.Component;
