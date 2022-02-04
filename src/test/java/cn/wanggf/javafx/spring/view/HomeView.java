@@ -8,4 +8,5 @@ import cn.wanggf.javafx.spring.core.FxView;
  */
 @View
 public class HomeView implements FxView {
+
 }

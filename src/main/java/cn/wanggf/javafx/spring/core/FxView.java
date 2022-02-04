@@ -17,7 +17,7 @@ public interface FxView {
      * @return 视图
      * @throws NotFoundViewException 视图获取异常
      */
-    default <T> T view() throws NotFoundViewException {
+    default <T extends Parent> T view() throws NotFoundViewException {
         throw new NotFoundViewException("get view failed.");
     }
 

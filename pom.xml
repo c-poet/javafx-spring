@@ -6,13 +6,12 @@
 
     <groupId>cn.wanggf.spring.javafx</groupId>
     <artifactId>javafx-spring</artifactId>
-    <version>1.0.0</version>
+    <version>0.0.1</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <spring.version>5.3.13</spring.version>
-        <junit.version>5.8.2</junit.version>
     </properties>
 
 

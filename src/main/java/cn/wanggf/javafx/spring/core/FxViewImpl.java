@@ -3,6 +3,7 @@ package cn.wanggf.javafx.spring.core;
 import cn.wanggf.javafx.spring.exception.NotFoundViewException;
 import cn.wanggf.javafx.spring.support.ControllerCallback;
 import cn.wanggf.javafx.spring.support.CustomFxmlLoader;
+import javafx.scene.Parent;
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
 import org.springframework.core.io.ResourceLoader;
@@ -30,7 +31,7 @@ public class FxViewImpl implements FxView, MethodInterceptor {
     }
 
     @Override
-    public <T> T view() throws NotFoundViewException {
+    public <T extends Parent> T view() throws NotFoundViewException {
         try {
             return CustomFxmlLoader.load(getViewPath(), controllerCallback);
         } catch (IOException e) {
